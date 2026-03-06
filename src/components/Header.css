@@ -1,4 +1,16 @@
 .header{
-    border: 1px solid rgb(250, 3, 3);
-    background-color: rgb(33, 36, 77);
+
+    background-color: rgb(39, 45, 68);
+    color: white;
+    text-transform: uppercase;
+   padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;      
+    width: 100%;  
+    z-index: 1000;
+    height: 20vh;
 }
+
+
+
