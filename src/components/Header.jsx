@@ -1,54 +1,62 @@
 import "./Header.css"
 import { Link } from "react-router-dom"
+import { useState } from "react";
 
 const navLinks = [
-    { name: "storia e tradizioni", path:"/storia&tradizioni" },
-    { name: "luoghi da vedere", path:"/luoghi-da-vedere"},
-    { name: "itinerari", path:"/itinerari"},
-    { name: "eventi", path:"/eventi"},
-    { name: "cosa mangiare", path:"/cosa-mangiare"},
-    { name: "chi siamo", path:"/chi-siamo" }
+    { name: "storia e tradizioni", path: "/storia&tradizioni" },
+    { name: "luoghi da vedere", path: "/luoghi-da-vedere" },
+    { name: "itinerari", path: "/itinerari" },
+    { name: "eventi", path: "/eventi" },
+    { name: "cosa mangiare", path: "/cosa-mangiare" },
+    { name: "chi siamo", path: "/chi-siamo" }
 
 ]
 export default function Header() {
     return (
-        <>
-            <div className="header">
-              
+        <header className="header-visit">
+            <nav className="navbar navbar-expand-lg navbar-dark">
+                <div className="container d-flex align-items-center justify-content-between">
+                    
+                    {/* HAMBURGER MENU */}
+                    <button className="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
+                    {/*LOGO*/}
+                    <Link to="/" className="navbar m-0 order-1 order-lg-0 logo-container">
+                        <img src="./logo.png" alt="Logo" className="logo-visit" />
+                    </Link>
 
-                <nav className="navbar  navbar-expand-lg navbar-dark">
-                    <div className="container-fluid">
-                        <Link className="navbar-brand" to="/"><img src="./logo.png" alt="" style={{width:"400px"}}/></Link>
-
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                                {navLinks.map((link, index) =>
-                                (
-                                    <li className="nav-item" key={index}>
-                                        <Link className="nav-link active" aria-current="page" to={link.path}>{link.name}</Link>
-                                    </li>
-                                ))}
-
-                                
-
-                            </ul>
-                            <form className="d-flex" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </div>
+                    {/* MENU */}
+                    <div className="collapse navbar-collapse order-lg-1 justify-content-center" id="navbarSupportedContent">
+                        <ul className="navbar-nav mb-2 mb-lg-0">
+                            {navLinks.map((link, index) => (
+                                <li className="nav-item text-center" key={index}>
+                                    <Link className="nav-link active" to={link.path}>{link.name}</Link>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                </nav>
-                </div>
-            
-        </>
-    )
 
+                    {/* SEARCHBAR*/}
+                    <div className="search-wrapper order-2 order-lg-2">
+
+                        {/* Icona Lente (Solo Mobile) */}
+                       <div className="d-sm-none text-white search-icon-mobile">
+                            <i className="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        {/* Searchbar Completa (Solo Desktop) */}
+                        <form className="d-none d-sm-flex search-visit" role="search">
+                            <div className="search-group">
+                                <i className="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input className="form-control form-control-sm" type="search" placeholder="Cerca..." />
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </nav>
+        </header>
+    );
 }

@@ -1,16 +1,75 @@
-.header{
-
-    background-color: rgb(39, 45, 68);
-    color: white;
-    text-transform: uppercase;
-   padding: 20px;
+/* --- BASE --- */
+.header-visit {
+    background-color: rgb(33, 36, 43);
     position: fixed;
     top: 0;
-    left: 0;      
-    width: 100%;  
+    width: 100%;
     z-index: 1000;
-    height: 20vh;
+
+}
+
+.logo-visit {
+    width: 180px; 
+    height: auto;
+}
+
+/* --- MOBILE LAYOUT (< 991px) --- */
+@media (max-width: 991px) {  
+
+    .logo-visit {
+        width: 180px; /* Un po' più piccolo per smartphone */
+    }
+
+    .navbar-toggler {
+        border: none; /* Rimuove il bordo*/
+        padding-left: 0;
+    }
+
+    .search-icon-mobile {
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 557px) {  
+.search-visit {
+        width: 200px;
+    }
+
+    .search-group {
+        position: relative;
+        width: 100%;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        z-index: 10;
+    }
+
+    .search-group .form-control {
+        padding-left: 30px;
+        border-radius: 20px;
+    }
+    
 }
 
 
 
+/* --- DESKTOP LAYOUT (> 992px) --- */
+@media (min-width: 992px) {
+    .logo-visit {
+        width: 200px;
+    }
+
+    
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
