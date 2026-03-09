@@ -1,5 +1,23 @@
 .herobanner{
-    height: 70vw;
+    background-attachment: fixed;
+    height: 100vh;
     background-image: url("./hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    margin-top: 70px;
+
+   
+}
+
+.text-heroBanner h2{
+      text-transform: uppercase;
+      color: grey;
+      font-size: 8rem;
+      font-weight: bolder;
+      opacity: 0.6;
+    
+
 }
 
