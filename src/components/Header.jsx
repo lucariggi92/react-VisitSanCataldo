@@ -3,16 +3,17 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 
 const navLinks = [
-    { name: "storia e tradizioni", path: "/storia&tradizioni" },
-    { name: "luoghi da vedere", path: "/luoghi-da-vedere" },
+    { name: "storia e tradizioni", path: "/category/storia" },
+    { name: "luoghi da vedere", path: "/category/luoghi" },
     { name: "itinerari", path: "/itinerari" },
-    { name: "eventi", path: "/eventi" },
-    { name: "cosa mangiare", path: "/cosa-mangiare" },
+    { name: "eventi", path: "/category/eventi" },
+    { name: "cosa mangiare", path: "/category/food" },
     { name: "chi siamo", path: "/chi-siamo" }
 
 ]
 export default function Header() {
     return (
+      
         <header className="header-visit">
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container d-flex align-items-center justify-content-between">

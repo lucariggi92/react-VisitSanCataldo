@@ -1,0 +1,54 @@
+/* La base della card */
+.glow-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: #1a1a1a; /* Sfondo scuro per far risaltare la luce */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Titolo e testo bianchi per contrasto */
+.glow-card .card-title {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glow-card .card-text {
+    color: #aaaaaa;
+}
+
+/* Hover: si solleva e accenna un'ombra */
+.glow-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d2ff; /* Colore della luce */
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+/* IL CLICK: L'effetto "Si Illumina" */
+.glow-card:active {
+    transform: scale(0.95); /* Effetto pressione */
+    background: #252525;
+    box-shadow: 0 0 30px #00d2ff, 0 0 60px rgba(0, 210, 255, 0.4);
+    border-color: #ffffff;
+    transition: all 0.1s;
+}
+
+/* L'immagine diventa più vivida al click */
+.glow-card:active img {
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.img-category {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(30%); /* Leggermente desaturata di base */
+    transition: all 0.3s;
+}
+
+.glow-card:hover img {
+    filter: grayscale(0%);
+}

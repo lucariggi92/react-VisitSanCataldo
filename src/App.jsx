@@ -17,11 +17,11 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/storia&tradizioni" element={<StoriaTradizioni />} />
-          <Route path="/luoghi-da-vedere" element={<LuoghiDaVedere />} />
+          <Route path="/category/storia" element={<StoriaTradizioni />} />
+          <Route path="/category/luoghi" element={<LuoghiDaVedere />} />
           <Route path="/itinerari" element={<Itinerari />} />
-          <Route path="/eventi" element={<Eventi />} />
-          <Route path="/cosa-mangiare" element={<CosaMangiare />} />
+          <Route path="/category/eventi" element={<Eventi />} />
+          <Route path="/category/food" element={<CosaMangiare />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
         </Route>
       </Routes>

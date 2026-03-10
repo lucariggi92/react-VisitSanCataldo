@@ -3,6 +3,16 @@
     margin:0;
     padding: 0;
     font-family: sans-serif;
+    
+
+
 
 }
 
+.main-design-layout-visit{
+       width: 100%;
+    max-width: 1400px; /* Larghezza massima del sito */
+    margin: 0 auto;
+    min-width: 0;
+
+}

@@ -1,9 +1,14 @@
-
+import CategoryBanner from "../components/CategoryBanner";
 
 export default function LuoghiDaVedere(){
-    return(
-        <>
-       Luoghi da vedere
-        </>
+           
+
+    return (
+        <div>
+     <CategoryBanner/>
+        </div>
+       
     )
+      
+    
 }
