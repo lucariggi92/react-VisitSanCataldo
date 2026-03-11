@@ -1,14 +1,14 @@
-import CategoryBanner from "../components/CategoryBanner";
+import ContentGrid from "../components/ContentGrid"
 
-export default function LuoghiDaVedere(){
-           
+export default function LuoghiDaVedere() {
+
 
     return (
         <div>
-     <CategoryBanner/>
+            <ContentGrid category="luoghi-da-visitare" />
         </div>
-       
+
     )
-      
-    
+
+
 }

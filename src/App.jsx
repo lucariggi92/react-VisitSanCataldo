@@ -18,10 +18,10 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/category/storia" element={<StoriaTradizioni />} />
-          <Route path="/category/luoghi" element={<LuoghiDaVedere />} />
+          <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVedere />} />
           <Route path="/itinerari" element={<Itinerari />} />
           <Route path="/category/eventi" element={<Eventi />} />
-          <Route path="/category/food" element={<CosaMangiare />} />
+          <Route path="/category/cosa-mangiare" element={<CosaMangiare />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
         </Route>
       </Routes>

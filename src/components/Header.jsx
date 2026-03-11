@@ -3,11 +3,11 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 
 const navLinks = [
-    { name: "storia e tradizioni", path: "/category/storia" },
-    { name: "luoghi da vedere", path: "/category/luoghi" },
+    { name: "storia e tradizioni", path: "/category/storia-e-tradizioni" },
+    { name: "luoghi da visitare", path: "/category/luoghi-da-visitare" },
     { name: "itinerari", path: "/itinerari" },
     { name: "eventi", path: "/category/eventi" },
-    { name: "cosa mangiare", path: "/category/food" },
+    { name: "cosa mangiare", path: "/category/cosa-mangiare" },
     { name: "chi siamo", path: "/chi-siamo" }
 
 ]

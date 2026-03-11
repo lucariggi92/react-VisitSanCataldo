@@ -1,10 +1,10 @@
-import HeroBanner from "../components/HeroBanner";
+import ContentGrid from "../components/ContentGrid"
 
 export default function Eventi(){
     return(
         <>
           <div>
-            <CategoryBanner/>
+             <ContentGrid category="eventi" />
                </div>
         </>
     )

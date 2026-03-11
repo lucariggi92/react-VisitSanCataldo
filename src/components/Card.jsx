@@ -7,7 +7,7 @@ export default function Card({ category, category_cover }) {
             <Link to={`/category/${category}`} className="card-link-visit">
                 <img src={category_cover} alt={category} className="img-card-visit" />
                 <div className="title-card-visit">
-                    <h1>{category}</h1>
+                    <h2>{category.replaceAll('-', ' ')}</h2>
                 </div>
             </Link>
         </div>

@@ -1,10 +1,10 @@
-import HeroBanner from "../components/HeroBanner";
+import ContentGrid from "../components/ContentGrid"
 
 export default function CosaMangiare(){
     return(
         <>
            <div>
-             <CategoryBanner/>
+            <ContentGrid category="cosa-mangiare" />
                 </div>
         </>
     )
