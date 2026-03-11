@@ -16,7 +16,7 @@ export default function CategoryBanner() {
 
     return (
         <div className="container">
-            <div className="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
 
                 {categories.map((c, index) => (
                     <Card 

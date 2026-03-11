@@ -1,7 +1,7 @@
-.herobanner{
+.itinerary-banner{
     background-attachment: fixed;
     height: 70vh;
-    background-image: url("./hero-1.jpg");
+    background-image: url("./itinerary-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -14,7 +14,7 @@
 
 
 
-.text-heroBanner h2{
+.text-itinerary-banner h2{
       text-transform: uppercase;
       color: rgb(239, 247, 240);
       font-size: 4vw;

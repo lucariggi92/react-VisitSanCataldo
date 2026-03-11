@@ -4,7 +4,7 @@ export default function StoriaTradizioni(){
     return(
         <>
           <div>
-           <ContentGrid category="storia" />
+           <ContentGrid category="storia-e-tradizioni" />
                </div>
         </>
     )

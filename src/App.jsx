@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/category/storia" element={<StoriaTradizioni />} />
+          <Route path="/category/storia-e-tradizioni" element={<StoriaTradizioni />} />
           <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVedere />} />
           <Route path="/itinerari" element={<Itinerari />} />
           <Route path="/category/eventi" element={<Eventi />} />
