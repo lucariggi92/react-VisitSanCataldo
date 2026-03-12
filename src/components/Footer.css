@@ -1,10 +1,82 @@
-.footer{
-
-    background-color: rgb(57, 57, 65);
-    display: flex;
+.footer-visit {
+    background-color: rgb(33, 36, 43);
     color: white;
-    justify-content: center;
-    padding: 20px;
-    width: 100%;;
- 
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-footer {
+    width: 150px;
+    height: auto;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-title-sm {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+/* Link del Footer */
+.footer-nav-links li {
+    margin-bottom: 10px;
+}
+
+.footer-nav-links a {
+    text-decoration: none;
+    color: #adb5bd;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-links a:hover {
+    color: white;
+}
+
+/* Social Icone */
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+/* Newsletter */
+.newsletter-group .form-control {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 20px 0 0 20px;
+}
+
+.newsletter-group .btn {
+    border-radius: 0 20px 20px 0;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.footer-info {
+    font-size: 0.9rem;
+    color: #adb5bd;
 }
