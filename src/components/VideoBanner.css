@@ -1,6 +1,6 @@
 /* La base della card */
 .glow-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(212, 25, 25, 0.1);
     border-radius: 15px;
     background: #1a1a1a; /* Sfondo scuro per far risaltare la luce */
     overflow: hidden;

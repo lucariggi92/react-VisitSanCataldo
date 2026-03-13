@@ -7,7 +7,7 @@ export default function ContentSearchbar() {
     const [items, setItems] = useState([]);
     const [searchParams] = useSearchParams();
     
-    // Legge il parametro 'search' dall'indirizzo (es: /risultati?search=pasticceria)
+    // Legge il parametro 'search' dall'indirizzo e || come valore di fallback e retituisce una stringa vuota
     const searchQuery = searchParams.get("search") || "";
 
     useEffect(() => {
