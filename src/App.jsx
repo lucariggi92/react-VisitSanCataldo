@@ -8,6 +8,7 @@ import ChiSiamo from './pages/ChiSiamo.jsx';
 import Eventi from './pages/Eventi.jsx';
 import CosaMangiare from './pages/CosaMangiare.jsx';
 import StoriaTradizioni from './pages/StoriaTradizioni.jsx';
+import Risultati from './pages/Risultati.jsx';
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
           <Route path="/category/eventi" element={<Eventi />} />
           <Route path="/category/cosa-mangiare" element={<CosaMangiare />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
+          <Route path="/risultati" element={<Risultati />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

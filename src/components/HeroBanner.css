@@ -1,27 +1,66 @@
-.herobanner{
-    background-attachment: fixed;
-    height: 70vh;
-    background-image: url("./hero-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+/* --- HERO BANNER --- */
+.herobanner {
     position: relative;
+    height: 70vh;
     margin-top: 70px;
+
+    clip-path: inset(0 0 0 0); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-
-   
 }
 
 
+.herobanner::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./hero-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 
-.text-heroBanner h2{
-      text-transform: uppercase;
-      color: rgb(239, 247, 240);
-      font-size: 4vw;
-      font-weight: bolder;
-    z-index:10;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  
+    pointer-events: none; 
 }
 
+.text-heroBanner h2 {
+    text-transform: uppercase;
+    color: rgb(239, 247, 240);
 
+    font-size: 4vw !important; 
+    font-weight: bolder;
+    z-index: 10;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-align: center;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* --- RESPONSIVE PER TESTO GRANDE --- */
+@media (max-width: 1024px) {
+    .text-heroBanner h2 {
+        font-size: 3.5rem !important; 
+    }
+}
+
+@media (max-width: 575px) {
+    .herobanner {
+        height: 60vh;
+    }
+    
+    .text-heroBanner h2 {
+        font-size: 2.5rem !important; 
+    }
+
+
+    .herobanner::before {
+        height: 100vh; 
+        transform: translateZ(0); 
+    }
+}

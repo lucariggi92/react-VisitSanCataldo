@@ -1,75 +1,152 @@
 /* --- BASE --- */
-.header-visit {
-    background-color: rgb(33, 36, 43);
+.fixed-top-container {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+}
 
+.header-visit {
+    background-color: rgb(33, 36, 43);
+    padding: 0.5rem 0;
 }
 
 .logo-visit {
-    width: 180px; 
+    width: 200px; /* Ridotto leggermente per dare spazio al menu */
     height: auto;
+    transition: all 0.3s ease;
 }
 
-/* --- MOBILE LAYOUT (< 991px) --- */
-@media (max-width: 991px) {  
-
-    .logo-visit {
-        width: 180px; /* Un po' più piccolo per smartphone */
-    }
-
-    .navbar-toggler {
-        border: none; /* Rimuove il bordo*/
-        padding-left: 0;
-    }
-
-    .search-icon-mobile {
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-}
-
-@media (min-width: 557px) {  
-.search-visit {
-        width: 200px;
-    }
-
-    .search-group {
-        position: relative;
-        width: 100%;
-    }
-
-    .search-icon {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #6c757d;
-        z-index: 10;
-    }
-
-    .search-group .form-control {
-        padding-left: 30px;
-        border-radius: 20px;
-    }
-    
-}
-
-
-
-/* --- DESKTOP LAYOUT (> 992px) --- */
-@media (min-width: 992px) {
-    .logo-visit {
-        width: 200px;
-    }
-
-    
-}
-
+/* --- MENU --- */
 .nav-link {
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     white-space: nowrap;
+    padding: 0.5rem 0.8rem !important;
+    color: rgba(255, 255, 255, 0.7); /* Colore di base leggermente trasparente */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* L'effetto hover moderno */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffc107; /* Colore giallo come il bottone search */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Il testo diventa bianco pieno */
+}
+
+.nav-link:hover::after {
+    width: 70%; /* La linea si espande sotto il testo */
+}
+
+
+/* --- SEARCHBAR STYLE --- */
+.search-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    z-index: 10;
+}
+
+.search-input {
+    padding-left: 35px !important;
+    height: 36px; /* Leggermente più bassa per eleganza */
+    border: none;
+    border-radius: 25px 0 0 25px !important;
+    font-size: 0.85rem;
+    width: 160px; /* LARGHEZZA BASE DESKTOP RIDOTTA */
+    transition: width 0.3s ease;
+}
+
+.btn-search-submit {
+    height: 36px;
+    padding: 0 15px;
+    background-color: #ffc107;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 0 25px 25px 0;
+    color: #21242b;
+}
+.btn-search-submit:hover {
+     background-color: #b98d07;
+     color: #ffffff;
+}
+
+/* --- MOBILE SEARCH BAR --- */
+.mobile-search-bar {
+    background-color: rgb(33, 36, 43);
+    padding: 5px 0 12px 0;
+}
+
+/* --- RESPONSIVE TABLET (992px - 1200px) --- */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .search-input {
+        width: 130px; /* Molto stretta per salvare il menu desktop */
+    }
+    .logo-visit {
+        width: 180px;
+    }
+}
+
+/* --- RESPONSIVE TABLET/MOBILE (< 991px) --- */
+@media (max-width: 991px) {
+    .logo-visit {
+        width: 150px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .search-input {
+        width: 100px; 
+    }
+}
+
+/* --- RESPONSIVE MOBILE (< 576px) --- */
+@media (max-width: 575px) {
+    .logo-visit {
+        width: 200px;
+    }
+    .mobile-search-bar .search-input {
+        width: 80%; /
+    }
+        .mobile-search-bar .search-group {
+        width: 80%;
+        max-width: 400px;
+        margin:0 auto;
+    }
+    .mobile-search-bar .search-icon {
+        left: 20px;
+   
+    }
+}
+
+/* --- LARGE DESKTOP (> 1200px) --- */
+@media (min-width: 1200px) {
+    .search-input {
+        width: 200px; /* Larghezza massima solo quando c'è molto spazio */
+    }
 }
