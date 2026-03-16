@@ -1,66 +1,129 @@
 /* --- HERO BANNER --- */
 .herobanner {
     position: relative;
-    height: 70vh;
-    margin-top: 70px;
-
-    clip-path: inset(0 0 0 0); 
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+ 
+    overflow: visible;
+    margin-top: 5px;
+    width: 100%;
+    height: 600px;
+  
+
+    background-image: url("./hero.png");
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.text-heroBanner {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25%;
 
-.herobanner::before {
-    content: "";
-    position: fixed; 
-    top: 0;
-    left: 0;
+    z-index: 10;
     width: 100%;
-    height: 100%;
-    background-image: url("./hero-1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-
-    pointer-events: none; 
+    text-align: center;
+    height: fit-content;
 }
 
 .text-heroBanner h2 {
+    color: rgb(33, 36, 43) !important;
+  
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    font-size: 3.5vw !important;
+    font-weight: 900;
     text-transform: uppercase;
-    color: rgb(239, 247, 240);
-
-    font-size: 4vw !important; 
-    font-weight: bolder;
-    z-index: 10;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    text-align: center;
-    line-height: 1.1;
-    margin: 0;
-    padding: 0 20px;
+    margin-bottom: 20px;
 }
 
-/* --- RESPONSIVE PER TESTO GRANDE --- */
-@media (max-width: 1024px) {
-    .text-heroBanner h2 {
-        font-size: 3.5rem !important; 
-    }
+
+.text-heroBanner .btn-outline-light {
+   
+    color: rgb(33, 36, 43) !important;
+    border: 2px solid rgb(33, 36, 43) !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(4px);
+    font-weight: bold !important;
+    padding: 10px 30px !important;
+    
+    font-size: 1.5vw !important;
 }
 
+.text-heroBanner .btn-outline-light:hover {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+}
+
+
+/*----------mobile-------------*/
 @media (max-width: 575px) {
     .herobanner {
-        height: 60vh;
-    }
-    
-    .text-heroBanner h2 {
-        font-size: 2.5rem !important; 
+        display: none !important;
     }
 
+    .mobile-h-card {
+        padding: 20px 15px;
+        margin-top: 170px; /* Ridotto il margine per farlo stare vicino all'header */
+        display: block !important;
+    }
 
-    .herobanner::before {
-        height: 100vh; 
-        transform: translateZ(0); 
+    .mobile-h-card .card-l-visit {
+        position: relative;
+        display: block;
+        height: 280px; /* Altezza fissa per dare spazio allo skyline */
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #f0f0f0; 
+    }
+
+    /* CORREZIONE SELETTORE E DIMENSIONI */
+    .mobile-h-card .img-c-visit {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        object-fit: cover !important;
+        /* Fondamentale per vedere la parte bassa (skyline) */
+        object-position: bottom center !important; 
+    }
+
+    .mobile-h-card .title-c-visit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Overlay scuro per leggere il testo sopra la skyline */
+        background: rgba(0, 0, 0, 0.3); 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .mobile-h-card .title-c-visit h2 {
+        color: white !important;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0 0 15px 0;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+
+    .mobile-h-card .btn-outline-light {
+        border-radius: 40px !important;
+        padding: 8px 25px !important;
+        font-weight: bold !important;
+        color: white !important;
+        border: 2px solid white !important;
+    }
+}
+
+/* --- NASCONDI CARD SU DESKTOP --- */
+@media (min-width: 576px) {
+    .mobile-h-card {
+        display: none !important;
     }
 }

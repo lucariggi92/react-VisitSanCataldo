@@ -2,7 +2,7 @@
 .glow-card {
     border: 1px solid rgba(212, 25, 25, 0.1);
     border-radius: 15px;
-    background: #1a1a1a; /* Sfondo scuro per far risaltare la luce */
+    background: #1a1a1a; 
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -23,13 +23,13 @@
 /* Hover: si solleva e accenna un'ombra */
 .glow-card:hover {
     transform: translateY(-5px);
-    border-color: #00d2ff; /* Colore della luce */
+    border-color: #00d2ff; 
     box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
 }
 
 /* IL CLICK: L'effetto "Si Illumina" */
 .glow-card:active {
-    transform: scale(0.95); /* Effetto pressione */
+    transform: scale(0.95); 
     background: #252525;
     box-shadow: 0 0 30px #00d2ff, 0 0 60px rgba(0, 210, 255, 0.4);
     border-color: #ffffff;
@@ -45,7 +45,7 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
-    filter: grayscale(30%); /* Leggermente desaturata di base */
+    filter: grayscale(30%); 
     transition: all 0.3s;
 }
 

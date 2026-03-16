@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import CardContents from "./CardContents";
 
+
 export default function ContentGrid({category}){
     const[items, setItems]=useState([])
 
@@ -12,7 +13,7 @@ export default function ContentGrid({category}){
     },[category])
     return(
 
-        <div className="container" style={{marginTop:"150px"}}>
+        <div className="container margin-grid-visit" style={{marginTop:"180px"}}>
             <h1 className="my-4 text-capitalize text-center">{category.replaceAll('-', ' ')}</h1>
                     <div className="row row-cols-1 row-cols-md-4 g-4 mt-4 mb-4">
         

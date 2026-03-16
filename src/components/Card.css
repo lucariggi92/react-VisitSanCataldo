@@ -43,11 +43,22 @@ background: rgba(0, 0, 0, 0.7)
     text-align: center;    
     width: 100%;
     margin: 0;
-    font-size: 2.5rem; /* Aggiusta se lo vuoi più grande */
+    font-size: 2.5rem; 
     font-weight: bolder;
     text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    line-height: 1.2; /* Spaziatura tra le righe più pulita */
+    line-height: 1.2; 
    
 }
 
+@media (max-width: 575px) {
+    .title-card-visit h2 {
+        font-size: 1.3rem !important; 
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        padding: 0 10px;
+    }
+
+    .img-card-visit {
+        height: 180px !important;
+    }
+}

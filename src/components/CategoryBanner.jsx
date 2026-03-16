@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
 import Card from "./card"
+import "./CategoryBanner.css"
 
 export default function CategoryBanner() {
     const [categories, setCategories] = useState([])
@@ -15,8 +16,12 @@ export default function CategoryBanner() {
     }, [])
 
     return (
+        <div className="mobile-category-hero-bg mt-3">
+       
         <div className="container">
-            <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
+                <h2 className="h2-hero"> Esplora</h2>
+            <div className="row row-hero">
+            
 
                 {categories.map((c, index) => (
                     <Card 
@@ -28,5 +33,7 @@ export default function CategoryBanner() {
 
             </div>
         </div>
+         </div>
     )
 }
+

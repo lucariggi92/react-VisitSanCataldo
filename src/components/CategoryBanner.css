@@ -1,0 +1,43 @@
+.h2-hero {
+    color: rgb(33, 36, 43);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+    .row-hero {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+     
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        scrollbar-width: none; 
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .col-6-mobile {
+        flex: 0 0 auto !important; 
+        width: 240px !important;  
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+   
+    .img-card-visit {
+        height: 280px !important; 
+        width: 100%;
+        object-fit: cover;
+    }
+
+   
+    .title-card-visit h2 {
+        font-size: 1.5rem !important;
+    }
+}

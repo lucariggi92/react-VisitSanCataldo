@@ -1,6 +1,6 @@
 /* Struttura Sezione */
 .follow-us-hero {
-    background-color: #121212; /* Sfondo scuro professionale */
+    background-color: #121212; 
     padding: 100px 0;
     color: white;
 }
@@ -98,7 +98,7 @@
     align-items: center;
     color: white;
     font-size: 1.5rem;
-    padding-left: 5px; /* Centra visivamente il triangolo del play */
+    padding-left: 5px; 
     transition: transform 0.3s ease;
 }
 

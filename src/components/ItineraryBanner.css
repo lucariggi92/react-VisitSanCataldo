@@ -1,27 +1,77 @@
-.itinerary-banner{
+.itinerary-banner {
     background-attachment: fixed;
-    height: 70vh;
+    height: 75vh; /* Leggermente più alto per maggiore respiro */
     background-image: url("./itinerary-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 70px;
     overflow: hidden;
-
-   
 }
 
-
-
-.text-itinerary-banner h2{
-      text-transform: uppercase;
-      color: rgb(239, 247, 240);
-      font-size: 4vw;
-      font-weight: bolder;
-    z-index:10;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  
+/* Overlay per garantire che il testo bianco si legga sempre */
+.itinerary-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Scurisce l'immagine quanto basta */
+    z-index: 1;
 }
 
+.text-heroBanner {
+    z-index: 10;
+    text-align: center;
+    width: 90%; /* Evita che il testo tocchi i bordi */
+}
 
+.text-heroBanner h2 {
+    text-transform: uppercase;
+    color: #ffffff !important; /* Bianco puro */
+    font-size: 6vw; /* MOLTO GRANDE su desktop */
+    font-weight: 900; /* Extra bold */
+    letter-spacing: 2px;
+    /* Ombra netta per profondità */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7); 
+    margin-bottom: 30px;
+}
+
+.text-heroBanner .btn-outline-light {
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    font-size: 1.5vw !important;
+    font-weight: bold !important;
+    padding: 12px 40px !important;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.text-heroBanner .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/*---------- MOBILE VERSION (< 575px) -------------*/
+@media (max-width: 575px) {
+    .itinerary-banner {
+            background-attachment: fixed;
+      
+        height: 60vh; /* Più alta su mobile per far vedere l'immagine */
+        background-position: center;
+    }
+
+    .text-heroBanner h2 {
+        font-size: 2.5rem !important; /* Molto grande anche su mobile */
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+    .text-heroBanner .btn-outline-light {
+        font-size: 1.2rem !important;
+        padding: 10px 30px !important;
+        border-radius: 40px !important;
+    }
+}

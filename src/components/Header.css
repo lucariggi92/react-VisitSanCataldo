@@ -1,4 +1,6 @@
-/* --- BASE --- */
+/* ==========================================
+   REGOLE COMUNI E GLOBALI
+   ========================================== */
 .fixed-top-container {
     position: fixed;
     top: 0;
@@ -6,52 +8,6 @@
     z-index: 1000;
 }
 
-.header-visit {
-    background-color: rgb(33, 36, 43);
-    padding: 0.5rem 0;
-}
-
-.logo-visit {
-    width: 200px; /* Ridotto leggermente per dare spazio al menu */
-    height: auto;
-    transition: all 0.3s ease;
-}
-
-/* --- MENU --- */
-.nav-link {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 500;
-    white-space: nowrap;
-    padding: 0.5rem 0.8rem !important;
-    color: rgba(255, 255, 255, 0.7); /* Colore di base leggermente trasparente */
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-/* L'effetto hover moderno */
-.nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: #ffc107; /* Colore giallo come il bottone search */
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover {
-    color: #ffffff; /* Il testo diventa bianco pieno */
-}
-
-.nav-link:hover::after {
-    width: 70%; /* La linea si espande sotto il testo */
-}
-
-
-/* --- SEARCHBAR STYLE --- */
 .search-group {
     position: relative;
     display: flex;
@@ -60,56 +16,95 @@
 
 .search-icon {
     position: absolute;
-    left: 15px; 
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     color: #6c757d;
     z-index: 10;
 }
 
+/* Stilizzazione Originale Searchbar (NON MODIFICATA) */
 .search-input {
     padding-left: 35px !important;
-    height: 36px; /* Leggermente più bassa per eleganza */
+    height: 36px;
     border: none;
     border-radius: 25px 0 0 25px !important;
     font-size: 0.85rem;
-    width: 160px; /* LARGHEZZA BASE DESKTOP RIDOTTA */
-    transition: width 0.3s ease;
 }
 
 .btn-search-submit {
     height: 36px;
     padding: 0 15px;
-    background-color: #ffc107;
+    background-color: #e7c556;
     border: none;
     font-size: 0.7rem;
     font-weight: bold;
     border-radius: 0 25px 25px 0;
     color: #21242b;
 }
-.btn-search-submit:hover {
-     background-color: #b98d07;
-     color: #ffffff;
-}
 
-/* --- MOBILE SEARCH BAR --- */
-.mobile-search-bar {
-    background-color: rgb(33, 36, 43);
-    padding: 5px 0 12px 0;
-}
-
-/* --- RESPONSIVE TABLET (992px - 1200px) --- */
-@media (max-width: 1199px) and (min-width: 992px) {
-    .search-input {
-        width: 130px; /* Molto stretta per salvare il menu desktop */
+/* ==========================================
+   MACROGRUPPO 1: DESKTOP (>= 992px)
+   ========================================== */
+@media (min-width: 992px) {
+    .header-visit {
+        background-color: rgb(33, 36, 43);
+        padding: 0.5rem 0;
     }
+
     .logo-visit {
-        width: 180px;
+        width: 200px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+
+    /* Nav Link Originali con linea gialla */
+    .nav-link {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #ffc107;
+        transition: 0.3s;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover {
+        color: #ffffff;
+    }
+
+    .nav-link:hover::after {
+        width: 70%;
+    }
+
+    /* Nascondi Hamburger e Header Mobile */
+    .navbar-toggler,
+    .custom-menu-offcanvas,
+    .header-mobile-white {
+        display: none !important;
     }
 }
 
-/* --- RESPONSIVE TABLET/MOBILE (< 991px) --- */
-@media (max-width: 991px) {
+/* ==========================================
+   MACROGRUPPO 2: TABLET (576px - 991px)
+   ========================================== */
+@media (min-width: 576px) and (max-width: 991px) {
+    .header-visit {
+        background-color: rgb(33, 36, 43);
+    }
+
     .logo-visit {
         width: 150px;
     }
@@ -120,33 +115,185 @@
         transform: translateX(-50%);
     }
 
-    .search-input {
-        width: 100px; 
+    /* Hamburger attivo */
+    .navbar-toggler {
+        display: block !important;
+    }
+
+    .custom-menu-offcanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(25, 28, 34);
+        z-index: 2000;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .custom-menu-offcanvas.open {
+        transform: translateX(0);
+    }
+
+    .offcanvas-header-visit {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-item-tablet {
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 18px 25px;
+        color: #eeeeee !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255, 193, 7, 0.15);
+        color: #ffc107 !important;
+        padding-left: 35px;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        z-index: 1500;
+    }
+
+    /* Nascondi Nav Desktop e Header Mobile */
+    .navbar-collapse,
+    .header-mobile-white {
+        display: none !important;
     }
 }
 
-/* --- RESPONSIVE MOBILE (< 576px) --- */
+/* ==========================================
+   MACROGRUPPO 3: MOBILE (< 576px)
+   ========================================== */
 @media (max-width: 575px) {
+    .header-mobile {
+        background-color: rgb(33, 36, 43);
+        border-bottom: 1px solid #f0f0f0;
+    }
+
     .logo-visit {
-        width: 200px;
+        width: 180px !important;
+        margin: 0 auto;
+        display: block;
     }
-    .mobile-search-bar .search-input {
-        width: 80%; /
+
+    /* Searchbar Mobile su fondo bianco (mantiene tondi) */
+    .mobile-search-area .search-input {
+        border: 1px solid #ddd !important;
+        /* Bordo visibile su bianco */
     }
-        .mobile-search-bar .search-group {
-        width: 80%;
-        max-width: 400px;
-        margin:0 auto;
+
+    .mobile-search-area {
+        margin-bottom: 20px;
     }
-    .mobile-search-bar .search-icon {
-        left: 20px;
-   
+
+    /* Categorie Mobile: RETTANGOLARI */
+    .category-scroll-wrapper {
+        display: flex;
+        overflow-x: auto;
+        padding: 20px 15px;
+        /* Più padding verticale per far respirare le ombre */
+        gap: 15px;
+        background-color: #ffffff;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .category-scroll-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Il link che contiene tutto */
+    .card-mini-visit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        min-width: 75px;
+        /* Larghezza totale della colonna */
+        max-width: 75px;
+    }
+
+    /* La Card Bianca (solo per l'immagine) */
+    .img-container-mini {
+        width: 75px;
+        /* Quadrata */
+        height: 75px;
+        /* Quadrata */
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Ombra grigia sulla card dell'immagine */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f0f0f0;
+        margin-bottom: 8px;
+        /* Spazio per il titolo fuori */
+    }
+
+    .img-mini {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Il Titolo Fuori dalla Card */
+    .title-mini {
+        color: #333333;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+        /* Non supera la larghezza della card (75px) */
+      
     }
 }
 
-/* --- LARGE DESKTOP (> 1200px) --- */
-@media (min-width: 1200px) {
-    .search-input {
-        width: 200px; /* Larghezza massima solo quando c'è molto spazio */
-    }
+
+
+
+/* OFFCANVAS BASE */
+.custom-menu-offcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-color: rgb(33, 36, 43);
+    z-index: 2500;
+    transition: 0.3s;
+    transform: translateX(-100%);
+}
+
+.custom-menu-offcanvas.open {
+    transform: translateX(0);
 }
