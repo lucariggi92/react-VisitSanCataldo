@@ -9,6 +9,7 @@ import Eventi from './pages/Eventi.jsx';
 import CosaMangiare from './pages/CosaMangiare.jsx';
 import StoriaTradizioni from './pages/StoriaTradizioni.jsx';
 import Risultati from './pages/Risultati.jsx';
+import DetailContentPage from './pages/DetailContentPage.jsx';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/:slug" element={<DetailContentPage />}/>
           <Route path="/category/storia-e-tradizioni" element={<StoriaTradizioni />} />
           <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVedere />} />
           <Route path="/itinerari" element={<Itinerari />} />
