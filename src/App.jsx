@@ -19,7 +19,6 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/:slug" element={<DetailContentPage />}/>
           <Route path="/category/storia-e-tradizioni" element={<StoriaTradizioni />} />
           <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVedere />} />
           <Route path="/itinerari" element={<Itinerari />} />
@@ -27,6 +26,7 @@ function App() {
           <Route path="/category/cosa-mangiare" element={<CosaMangiare />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/risultati" element={<Risultati />} />
+          <Route path="/:slug" element={<DetailContentPage />}/>
 
         </Route>
       </Routes>

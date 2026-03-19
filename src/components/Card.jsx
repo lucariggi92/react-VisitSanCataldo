@@ -5,7 +5,7 @@ export default function Card({ category, category_cover }) {
     // MI RIPORTA IN CIMA
     const handleStartClick = () => {
     window.scrollTo(0, 0); 
-    closeMenu(); 
+    // closeMenu(); // Commentato perché non definito - aggiungi se necessario
 };
     return (
         <div className="col-6  col-6-mobile my-3 col-md-6 col-lg-4">

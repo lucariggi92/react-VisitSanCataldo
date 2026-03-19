@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import CardDetail from "../components/CardDetail"; // Assicurati che il percorso sia corretto
+import CardDetail from "../components/CardDetail"; 
 
 export default function DetailContentPage() {
-    const { slug } = useParams(); // Recupera lo slug dall'URL di React Router
+    const { slug } = useParams(); 
     const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -14,11 +14,11 @@ export default function DetailContentPage() {
         axios.get(`http://localhost:3000/api/contents/${slug}`)
             .then((res) => {
                 setItem(res.data);
-                setLoading(false);
+                setLoading(false);//ho avuto successo dopo il then quindi è terminatp
             })
             .catch((err) => {
                 console.error("Errore nel caricamento:", err);
-                setLoading(false);
+                setLoading(false); //c'è un errore ma do comuqne una risposta
             });
     }, [slug]);
 

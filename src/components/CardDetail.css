@@ -1,0 +1,16 @@
+.main-image-viewport {
+    width: 100%;          /* Occupi tutta la larghezza disponibile */
+    max-width: 100%;      /* Eviti overflow */
+    height: 600px;        /* Altezza fissa (puoi cambiare in base alle tue esigenze) */
+    overflow: hidden;     /* Nasconde eventuali parti dell’immagine che escono dal contenitore */
+    border-radius: 16px;  /* Mantieni gli angoli arrotondati come nel JSX */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;   /* Utile se vuoi posizionare overlay sopra l’immagine */
+}
+
+.main-image-viewport img {
+    width: 100%;          /* L’immagine riempie la larghezza del contenitore */
+    height: 100%;         /* L’immagine riempie l’altezza fissa del contenitore */
+    object-fit: cover;    /* L’immagine si adatta ritagliando parti fuori dal contenitore */
+    display: block;       /* Evita spazi bianchi indesiderati sotto l’immagine */
+}

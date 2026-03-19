@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
-import Card from "./card"
+import Card from "./Card"
 import "./CategoryBanner.css"
 
 export default function CategoryBanner() {
