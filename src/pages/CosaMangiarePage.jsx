@@ -1,6 +1,6 @@
 import ContentGrid from "../components/ContentGrid"
 
-export default function CosaMangiare(){
+export default function CosaMangiarePage(){
     return(
         <>
            <div>

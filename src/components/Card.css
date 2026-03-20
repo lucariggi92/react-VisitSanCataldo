@@ -62,3 +62,57 @@ background: rgba(0, 0, 0, 0.7)
         height: 180px !important;
     }
 }
+
+.category-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.category-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #21252b; /* Il blu scuro del tuo brand */
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Sottolineatura decorativa */
+.category-underline {
+    width: 80px;
+    height: 5px;
+    background-color: #ca1414; /* Il rosso che abbiamo usato per l'hover */
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Effetto al caricamento della pagina */
+.category-title {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+    .category-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .category-header {
+        margin-bottom: 30px;
+    }
+}

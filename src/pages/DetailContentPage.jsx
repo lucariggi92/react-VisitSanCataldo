@@ -9,12 +9,17 @@ export default function DetailContentPage() {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
+
+
     useEffect(() => {
+
+        
         // Chiamata alla rotta GET /api/contents/:slug
         axios.get(`http://localhost:3000/api/contents/${slug}`)
             .then((res) => {
                 setItem(res.data);
                 setLoading(false);//ho avuto successo dopo il then quindi è terminatp
+                window.scrollTo(0, 0);
             })
             .catch((err) => {
                 console.error("Errore nel caricamento:", err);
@@ -30,16 +35,16 @@ export default function DetailContentPage() {
     );
 
     if (!item) return (
-        <div className="container text-center" style={{ marginTop: "200px" }}>
+        <div className="container text-center" style={{ marginTop: "300px" }}>
             <h2>Contenuto non trovato</h2>
             <button className="btn btn-primary mt-3" onClick={() => navigate('/')}>Torna alla Home</button>
         </div>
     );
 
     return (
-        <div className="container" style={{ marginTop: "160px", marginBottom: "100px" }}>
+        <div className="container" style={{ marginTop: "180px" }}>
             <button 
-                className="btn btn-outline-dark mb-5 rounded-pill px-4" 
+                className="btn btn-outline-dark mb-3 rounded-pill px-4" 
                 onClick={() => navigate(-1)}
             >
                 <i className="bi bi-arrow-left"></i> Torna indietro

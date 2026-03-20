@@ -18,30 +18,30 @@
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Scurisce l'immagine quanto basta */
+    background: rgba(0, 0, 0, 0.253); /* Scurisce l'immagine quanto basta */
     z-index: 1;
 }
 
-.text-heroBanner {
+.text-itineraryBanner {
     z-index: 10;
     text-align: center;
     width: 90%; /* Evita che il testo tocchi i bordi */
 }
 
-.text-heroBanner h2 {
+.text-itineraryBanner h2 {
     text-transform: uppercase;
-    color: #ffffff !important; /* Bianco puro */
-    font-size: 6vw; /* MOLTO GRANDE su desktop */
+    font-size: 4vw; /* MOLTO GRANDE su desktop */
     font-weight: 900; /* Extra bold */
     letter-spacing: 2px;
+    color: white;
     /* Ombra netta per profondità */
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7); 
+    text-shadow: 3px 3px 15px rgba(36, 29, 29, 0.7); 
     margin-bottom: 30px;
 }
 
-.text-heroBanner .btn-outline-light {
-    color: #ffffff !important;
-    border: 2px solid #ffffff !important;
+.text-itineraryBanner .btn-outline-light {
+    color: rgb(255, 255, 255)!important;
+    border: 2px solid rgb(255, 255, 255)!important;
     font-size: 1.5vw !important;
     font-weight: bold !important;
     padding: 12px 40px !important;
@@ -49,9 +49,9 @@
     transition: all 0.3s ease;
 }
 
-.text-heroBanner .btn-outline-light:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+.text-itineraryBanner .btn-outline-light:hover {
+    background-color:white !important;
+    color: rgb(33, 36, 43)!important;
 }
 
 /*---------- MOBILE VERSION (< 575px) -------------*/
@@ -63,13 +63,13 @@
         background-position: center;
     }
 
-    .text-heroBanner h2 {
+    .text-itineraryBanner h2 {
         font-size: 2.5rem !important; /* Molto grande anche su mobile */
         line-height: 1.1;
         margin-bottom: 25px;
     }
 
-    .text-heroBanner .btn-outline-light {
+    .text-itineraryBanner .btn-outline-light {
         font-size: 1.2rem !important;
         padding: 10px 30px !important;
         border-radius: 40px !important;

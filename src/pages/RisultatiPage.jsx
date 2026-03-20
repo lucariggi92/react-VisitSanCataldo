@@ -1,5 +1,5 @@
 import ContentSearchbar from "../components/ContentSearchbar"
-export default function Risultati(){
+export default function RisultatiPage(){
     return(
         <div>
 

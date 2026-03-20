@@ -2,9 +2,10 @@
    REGOLE COMUNI E GLOBALI
    ========================================== */
 .fixed-top-container {
-    position: fixed;
+   position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
 
@@ -103,10 +104,11 @@
 @media (min-width: 576px) and (max-width: 991px) {
     .header-visit {
         background-color: rgb(33, 36, 43);
+      
     }
 
     .logo-visit {
-        width: 150px;
+        width: 100px;
     }
 
     .navbar-brand {
@@ -195,6 +197,7 @@
     .header-mobile {
         background-color: rgb(33, 36, 43);
         border-bottom: 1px solid #f0f0f0;
+     
     }
 
     .logo-visit {

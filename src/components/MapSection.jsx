@@ -42,7 +42,7 @@ export default function MapSection() {
     return (
         <section className="map-section container my-5">
             <div className="text-center mb-4">
-                <h2 className="fw-bold text-uppercase">Esplora San Cataldo</h2>
+                <h2 className="fw-bold ">Esplora San Cataldo</h2>
                 <p className="text-muted">Naviga tra i luoghi d'interesse direttamente sulla mappa</p>
             </div>
 

@@ -1,10 +1,10 @@
 import ContentGrid from "../components/ContentGrid"
 
-export default function StoriaTradizioni(){
+export default function EventiPage(){
     return(
         <>
           <div>
-           <ContentGrid category="storia-e-tradizioni" />
+             <ContentGrid category="eventi" />
                </div>
         </>
     )

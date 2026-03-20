@@ -1,16 +1,60 @@
+/* Viewport principale per lo scroll orizzontale */
 .main-image-viewport {
-    width: 100%;          /* Occupi tutta la larghezza disponibile */
-    max-width: 100%;      /* Eviti overflow */
-    height: 600px;        /* Altezza fissa (puoi cambiare in base alle tue esigenze) */
-    overflow: hidden;     /* Nasconde eventuali parti dell’immagine che escono dal contenitore */
-    border-radius: 16px;  /* Mantieni gli angoli arrotondati come nel JSX */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: relative;   /* Utile se vuoi posizionare overlay sopra l’immagine */
+    width: 100%;
+    height: 400px;
+    border-radius: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Nascondi barra scroll */
+.main-image-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* Immagini dentro lo slider */
 .main-image-viewport img {
-    width: 100%;          /* L’immagine riempie la larghezza del contenitore */
-    height: 100%;         /* L’immagine riempie l’altezza fissa del contenitore */
-    object-fit: cover;    /* L’immagine si adatta ritagliando parti fuori dal contenitore */
-    display: block;       /* Evita spazi bianchi indesiderati sotto l’immagine */
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* Contenitore Pallini */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 0;
+}
+
+/* Stile base dei pallini */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Pallino attivo */
+.dot.active {
+    background-color: #dc3545;
+    transform: scale(1.3);
+}
+
+/* Media Query per altezza viewport su schermi piccoli */
+@media (max-width: 576px) {
+    .main-image-viewport {
+        height: 400px;
+    }
 }

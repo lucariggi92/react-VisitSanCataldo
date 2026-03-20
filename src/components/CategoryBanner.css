@@ -1,7 +1,7 @@
 .h2-hero {
     color: rgb(33, 36, 43);
     font-weight: bolder;
-    text-transform: uppercase;
+   
 }
 
 @media (max-width: 991px) {
@@ -40,4 +40,27 @@
     .title-card-visit h2 {
         font-size: 1.5rem !important;
     }
+
+    /* Contenitore dei pallini */
+.category-dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    gap: 6px;
+}
+
+/* Pallino base */
+.category-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(33,36,43,0.3);
+    transition: background-color 0.3s;
+}
+
+/* Pallino attivo */
+.category-dots .dot.active {
+    background-color: rgb(33,36,43);
+}
+    
 }

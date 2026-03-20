@@ -5,7 +5,7 @@
     justify-content: center;
  
     overflow: visible;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
     height: 600px;
   
@@ -34,48 +34,43 @@
     font-size: 3.5vw !important;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 
-.text-heroBanner .btn-outline-light {
-   
-    color: rgb(33, 36, 43) !important;
-    border: 2px solid rgb(33, 36, 43) !important;
-    background-color: rgba(255, 255, 255, 0.4) !important;
-    backdrop-filter: blur(4px);
-    font-weight: bold !important;
-    padding: 10px 30px !important;
-    
-    font-size: 1.5vw !important;
+.btn-hero {
+    background-color: rgb(33, 36, 43); 
+    color: white;                      
+    border: 2px solid rgb(33, 36, 43);
+    border-radius: 40px;
+    padding: 10px 30px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;        
 }
 
-.text-heroBanner .btn-outline-light:hover {
-    background-color: #212529 !important;
-    color: #ffffff !important;
+/* --- EFFETTO HOVER --- */
+.btn-hero:hover {
+    background-color: white;          
+    color: rgb(33, 36, 43);                  
+    border-color:rgb(33, 36, 43);            
 }
-
 
 /*----------mobile-------------*/
 @media (max-width: 575px) {
     .herobanner {
         display: none !important;
+   
     }
 
     .mobile-h-card {
-        padding: 20px 15px;
-        margin-top: 170px; /* Ridotto il margine per farlo stare vicino all'header */
-        display: block !important;
-    }
-
-    .mobile-h-card .card-l-visit {
+        /* Rimuovi quel margin-top di 500px che avevi prima */
+        margin-top: 170px !important; 
         position: relative;
-        display: block;
-        height: 280px; /* Altezza fissa per dare spazio allo skyline */
-        border-radius: 20px;
-        overflow: hidden;
-        background-color: #f0f0f0; 
-    }
+        width: 100%;
+        height: 250px;}
+
 
     /* CORREZIONE SELETTORE E DIMENSIONI */
     .mobile-h-card .img-c-visit {
@@ -112,18 +107,23 @@
         text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
-    .mobile-h-card .btn-outline-light {
-        border-radius: 40px !important;
-        padding: 8px 25px !important;
-        font-weight: bold !important;
-        color: white !important;
-        border: 2px solid white !important;
+   .mobile-h-card .btn-hero {
+        border-radius: 40px;
+        padding: 8px 25px;
+        font-weight: bold;
+        font-size: 1rem; /* Dimensione fissa per mobile, più leggibile */
+        color: white;
+        border: 2px solid rgb(33, 36, 43);
+        background-color: rgb(33, 36, 43);
+        transition: all 0.3s ease;
+    }
+
+    /* Hover anche su mobile (opzionale, ma consigliato per coerenza) */
+    .mobile-h-card .btn-hero:active, 
+    .mobile-h-card .btn-hero:hover {
+        background-color: white;
+        color: rgb(33, 36, 43);
+        border-color:  rgb(33, 36, 43);
     }
 }
 
-/* --- NASCONDI CARD SU DESKTOP --- */
-@media (min-width: 576px) {
-    .mobile-h-card {
-        display: none !important;
-    }
-}

@@ -1,14 +1,14 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./layout/DefaultLayout.jsx";
-import Home from "./pages/Home";
-import LuoghiDaVedere from './pages/LuoghiDaVedere.jsx';
-import Itinerari from './pages/Itinerari.jsx';
-import ChiSiamo from './pages/ChiSiamo.jsx';
-import Eventi from './pages/Eventi.jsx';
-import CosaMangiare from './pages/CosaMangiare.jsx';
-import StoriaTradizioni from './pages/StoriaTradizioni.jsx';
-import Risultati from './pages/Risultati.jsx';
+import HomePage from "./pages/HomePage";
+import LuoghiDaVederePage from './pages/LuoghiDaVederePage.jsx';
+import ItinerariPage from './pages/ItinerariPage.jsx';
+import ChiSiamoPage from './pages/ChiSiamoPage.jsx';
+import EventiPage from './pages/EventiPage.jsx';
+import CosaMangiarePage from './pages/CosaMangiarePage.jsx';
+import StoriaTradizioniPage from './pages/StoriaTradizioniPage.jsx';
+import RisultatiPage from './pages/RisultatiPage.jsx';
 import DetailContentPage from './pages/DetailContentPage.jsx';
 
 function App() {
@@ -18,14 +18,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/category/storia-e-tradizioni" element={<StoriaTradizioni />} />
-          <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVedere />} />
-          <Route path="/itinerari" element={<Itinerari />} />
-          <Route path="/category/eventi" element={<Eventi />} />
-          <Route path="/category/cosa-mangiare" element={<CosaMangiare />} />
-          <Route path="/chi-siamo" element={<ChiSiamo />} />
-          <Route path="/risultati" element={<Risultati />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/category/storia-e-tradizioni" element={<StoriaTradizioniPage />} />
+          <Route path="/category/luoghi-da-visitare" element={<LuoghiDaVederePage />} />
+          <Route path="/itinerari" element={<ItinerariPage />} />
+          <Route path="/category/eventi" element={<EventiPage />} />
+          <Route path="/category/cosa-mangiare" element={<CosaMangiarePage />} />
+          <Route path="/chi-siamo" element={<ChiSiamoPage />} />
+          <Route path="/risultati" element={<RisultatiPage />} />
           <Route path="/:slug" element={<DetailContentPage />}/>
 
         </Route>

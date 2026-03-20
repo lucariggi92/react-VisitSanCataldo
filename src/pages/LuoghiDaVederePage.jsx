@@ -1,6 +1,6 @@
 import ContentGrid from "../components/ContentGrid"
 
-export default function LuoghiDaVedere() {
+export default function LuoghiDaVederePage() {
 
 
     return (

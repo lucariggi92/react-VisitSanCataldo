@@ -4,9 +4,9 @@ export default function ItineraryBanner(){
     return(
         <>
             <div className="itinerary-banner pt-5">
-                <div className="container-fluid text-heroBanner d-flex flex-column   justify-content-center align-items-center">
+                <div className="container-fluid text-itineraryBanner d-flex flex-column   justify-content-center align-items-center">
                <h2>Scopri gli Itinerari</h2>
-             <Link to="/chi-siamo">
+             <Link to={`/itineraries`} >
              <button type="button" className="btn btn-outline-light" style={{fontSize:"2vw", borderRadius:"40px"}}>Scopri di più</button>
                </Link>
                </div>

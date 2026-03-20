@@ -4,7 +4,7 @@ import ItineraryBanner from "../components/ItineraryBanner";
 import FollowUsBanner from "../components/FollowUsBanner";
 import MapSection from "../components/MapSection";
 
-export default function Home(){
+export default function HomePage(){
     return(
         <>
         <HeroBanner/>
