@@ -1,0 +1,80 @@
+.card-link-contents {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+    overflow: hidden; 
+    border-radius: 20px;
+background: rgba(0, 0, 0, 0.7)
+}
+
+.img-card-contents {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-link-contents:hover .img-card-contents {
+    transform: scale(1.1); 
+}
+.title-card-contents {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease;
+ 
+}
+
+.title-card-contents h2 {
+
+    text-align: center;    
+    width: 100%;
+    margin: 0;
+    font-size: 2.5rem; 
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    line-height: 1.2; 
+   
+}
+
+@media (max-width: 575px) {
+    .title-card-contents h2 {
+        font-size: 1.3rem !important; 
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        padding: 0 10px;
+    }
+
+    .img-card-contents {
+        height: 180px !important;
+    }
+}
+
+
+.badge-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: white; /* Il colore testo viene sovrascritto dal JS se necessario */
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    z-index: 5; /* Lo tiene sopra l'immagine */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
+}

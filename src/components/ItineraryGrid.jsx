@@ -11,6 +11,7 @@ export default function ItineraryGrid(){
         axios.get(`http://localhost:3000/api/itineraries`)
         .then((res)=>{setItems(res.data.results)})
         .catch((err)=> console.error(`Errore caricamento Itinerari`, err))
+        window.scrollTo(0, 0);
     },[])
     return(
 

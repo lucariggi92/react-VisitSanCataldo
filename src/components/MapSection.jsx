@@ -75,13 +75,7 @@ export default function MapSection() {
                             >
                                 <Popup>
                                     <div className="popup-content" style={{ width: "180px" }}>
-                                        {item.cover_image && (
-                                            <img 
-                                                src={`http://localhost:3000/img/${item.cover_image}`} 
-                                                alt={item.title} 
-                                                style={{ width: "100%", height: "100px", objectFit: "cover", borderRadius: "8px" }}
-                                            />
-                                        )}
+                                    
                                         <h6 className="mt-2 fw-bold" style={{ fontSize: "0.9rem" }}>{item.title}</h6>
                                         <p className="text-muted small mb-2">
                                             {item.category.replace(/-/g, ' ')}
