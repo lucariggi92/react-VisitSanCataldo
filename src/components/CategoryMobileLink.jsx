@@ -4,7 +4,7 @@ import axios from "axios";
 
 import CardMini from "./CardMini"; 
 
-
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function CategoryMobileLink() {
 
@@ -14,7 +14,7 @@ export default function CategoryMobileLink() {
 
     useEffect(() => {
 
-        axios.get("http://localhost:3000/api/categories")
+        axios.get(`${API_URL}/api/categories`)
 
             .then((res) => setCategories(res.data.results))
 
@@ -36,7 +36,7 @@ export default function CategoryMobileLink() {
 
                     category={c.category}
 
-                    category_cover={`http://localhost:3000/images/${c.category_cover}`}
+                    category_cover={`${API_URL}/images/${c.category_cover}`}
 
                 />
 

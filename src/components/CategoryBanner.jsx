@@ -3,13 +3,17 @@ import axios from "axios"
 import Card from "./Card"
 import "./CategoryBanner.css"
 
+
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
+
 export default function CategoryBanner() {
     const [categories, setCategories] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
     const scrollRef = useRef(null);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/categories")
+        axios.get(`${API_URL}/api/categories`)
             .then((res) => {
                 setCategories(res.data.results);
             })
@@ -47,7 +51,7 @@ export default function CategoryBanner() {
                     <Card 
                     key={index}
                     category={c.category}
-                    category_cover={`http://localhost:3000/images/${c.category_cover}`}/>
+                    category_cover={`${API_URL}/images/${c.category_cover}`}/>
                   
                 ))}
 

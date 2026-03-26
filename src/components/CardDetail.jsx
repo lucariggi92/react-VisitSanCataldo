@@ -15,12 +15,12 @@ const defaultMarkerIcon = L.icon({
 export default function CardDetail({ item }) {
     const imgBaseUrl = "http://localhost:3000";
     
-    // --- REINSERITE LE TUE VARIABILI ORIGINALI ---
+
     const [mainImage, setMainImage] = useState(item.images?.[0]?.url || "");
     const [activeIndex, setActiveIndex] = useState(0);
     const scrollRef = useRef(null);
 
-    // Reinserito il tuo useEffect originale per aggiornare l'immagine se cambia l'item
+    // useEffect  aggiornare l'immagine se cambia l'item
     useEffect(() => {
         const firstImg = item.images?.[0]?.url || "";
         setMainImage(firstImg);
@@ -42,7 +42,7 @@ export default function CardDetail({ item }) {
         }
     };
 
-    // Funzione per scrollare all'immagine quando si clicca una thumbnail (Desktop)
+    // Funzione per scrollare all'immagine quando si clicca una thumbnail 
     const scrollToImage = (imgUrl, index) => {
         setMainImage(imgUrl);
         setActiveIndex(index);
