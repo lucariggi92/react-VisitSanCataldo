@@ -35,22 +35,9 @@
     padding: 15px 0;
 }
 
-/* Stile base dei pallini */
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
 
-/* Pallino attivo */
-.dot.active {
-    background-color: #dc3545;
-    transform: scale(1.3);
-}
+
+
 
 /* Media Query per altezza viewport su schermi piccoli */
 @media (max-width: 576px) {
