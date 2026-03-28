@@ -8,7 +8,7 @@ export default function ItineraryGrid(){
 
     
     useEffect(()=>{
-        axios.get(`http://localhost:3000/api/itineraries`)
+        axios.get(`${API_URL}/api/itineraries`)
         .then((res)=>{setItems(res.data.results)})
         .catch((err)=> console.error(`Errore caricamento Itinerari`, err))
         window.scrollTo(0, 0);
@@ -30,7 +30,7 @@ export default function ItineraryGrid(){
                                                
                         title={i.title}
                            
-                            cover_image={`http://localhost:3000/images/${i.cover_image}`}
+                            cover_image={`${API_URL}/images/${i.cover_image}`}
                             />
                           
                         ))}

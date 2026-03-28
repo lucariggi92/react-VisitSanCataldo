@@ -6,7 +6,7 @@ import { useSearchParams } from "react-router-dom";
 
 import CardContents from "./CardContents";
 
-
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function ContentSearchbar() {
 
@@ -32,9 +32,9 @@ export default function ContentSearchbar() {
 
                 const [resContents, resItineraries] = await Promise.all([
 
-                    axios.get(`http://localhost:3000/api/contents?search=${searchQuery}`),
+                    axios.get(`${API_URL}/api/contents?search=${searchQuery}`),
 
-                    axios.get(`http://localhost:3000/api/itineraries?search=${searchQuery}`)
+                    axios.get(`${API_URL}/api/itineraries?search=${searchQuery}`)
 
                 ]);
 
@@ -114,7 +114,7 @@ export default function ContentSearchbar() {
 
                         link={`/contents/${i.slug}`}
 
-                        cover_image={`http://localhost:3000/images/${i.cover_image}`}
+                        cover_image={`${API_URL}/images/${i.cover_image}`}
 
                     />
 
@@ -146,9 +146,9 @@ export default function ContentSearchbar() {
 
                         cover_image={it.cover_image
 
-                            ? `http://localhost:3000/images/${it.cover_image}`
+                            ? `${API_URL}/images/${it.cover_image}`
 
-                            : "http://localhost:3000/images/default-itinerary.jpg"
+                            : `${API_URL}/images/default-itinerary.jpg`
 
                         }
 
