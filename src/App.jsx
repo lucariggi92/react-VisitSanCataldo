@@ -10,6 +10,7 @@ import CosaMangiarePage from './pages/CosaMangiarePage.jsx';
 import StoriaTradizioniPage from './pages/StoriaTradizioniPage.jsx';
 import RisultatiPage from './pages/RisultatiPage.jsx';
 import DetailContentPage from './pages/DetailContentPage.jsx';
+import SitiArcheologiciPage from './pages/SitiArcheologiciPage.jsx';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/itinerari" element={<ItinerariPage />} />
           <Route path="/category/eventi" element={<EventiPage />} />
           <Route path="/category/cosa-mangiare" element={<CosaMangiarePage />} />
+            <Route path="/category/siti-archeologici" element={<SitiArcheologiciPage />} />
           <Route path="/chi-siamo" element={<ChiSiamoPage />} />
           <Route path="/risultati" element={<RisultatiPage />} />
           <Route path="/:slug" element={<DetailContentPage />}/>
