@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
+
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 // --- FIX ICONE LEAFLET ---
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -25,7 +28,7 @@ export default function MapSection() {
     const centerPosition = [37.488, 14.064];
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/contents') 
+       fetch(`${API_URL}/api/contents`)
             .then(res => res.json())
             .then(data => {
                 setResults(data.results || []);
@@ -81,7 +84,7 @@ export default function MapSection() {
                                             {item.category.replace(/-/g, ' ')}
                                         </p>
                                         <Link 
-                                            to={`/contents/${item.slug}`} 
+                                            to={`/${item.slug}`} 
                                             className="btn btn-dark btn-sm w-100 text-white"
                                             style={{ borderRadius: "20px", fontSize: "0.8rem" }}
                                         >
