@@ -30,6 +30,7 @@ export default function ContentGrid({category}){
                                                
                         title={i.title}
                             slug={i.slug}
+                            category={category}
                             cover_image={`${API_URL}/images/${i.cover_image}`}
                             />
                           

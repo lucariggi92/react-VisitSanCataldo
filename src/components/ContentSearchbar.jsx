@@ -108,9 +108,9 @@ export default function ContentSearchbar() {
 
                         // Specifichiamo che è un contenuto
 
-                        category="Luogo/Evento"
+                        category={i.category}
 
-                        // Creiamo il link corretto
+                       
 
                         link={`/contents/${i.slug}`}
 
@@ -136,7 +136,7 @@ export default function ContentSearchbar() {
 
                         // Specifichiamo che è un itinerario
 
-                        category="Itinerario"
+                        category={it.category}
 
                         // Cambiamo la rotta del link
 
