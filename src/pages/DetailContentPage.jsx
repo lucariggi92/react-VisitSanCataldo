@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import CardDetail from "../components/CardDetail"; 
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 export default function DetailContentPage() {
     const { slug } = useParams(); 
     const [item, setItem] = useState(null);
@@ -15,7 +17,7 @@ export default function DetailContentPage() {
 
         
         // Chiamata alla rotta GET /api/contents/:slug
-        axios.get(`http://localhost:3000/api/contents/${slug}`)
+        axios.get(`${API_URL}/api/contents/${slug}`)
             .then((res) => {
                 setItem(res.data);
                 setLoading(false);//ho avuto successo dopo il then quindi è terminatp

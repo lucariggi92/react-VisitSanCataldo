@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import CardItineraries from "./CardItineraries";
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function ItineraryGrid(){
     const[items, setItems]=useState([])
